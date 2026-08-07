@@ -190,7 +190,7 @@
             background: #fcfdfe;
             border: 2px solid #e8f5e9;
             border-radius: 16px;
-            padding: 18px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -200,6 +200,26 @@
         .spot-card:hover {
             transform: translateY(-3px);
             border-color: var(--primary-green);
+        }
+
+        .img-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            height: 160px;
+        }
+
+        .spot-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .spot-card:hover .spot-img {
+            transform: scale(1.04);
         }
 
         .spot-top {
@@ -292,9 +312,12 @@
             <div class="info-title">🏡 樂山水民宿（包棟 3 間四人房）</div>
             <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣冬山鄉柯林一路266號" target="_blank">🗺️ 導航去民宿</a>
         </div>
-        <div style="font-size: 14px; color: var(--text-sub); font-weight: 700;">
+        <div style="font-size: 14px; color: var(--text-sub); font-weight: 700; margin-bottom: 12px;">
             📍 地址：宜蘭縣冬山鄉柯林一路266號<br>
             ⏰ 時間：8/23 (日) 15:00 入住 ｜ 8/25 (二) 11:00 前退房
+        </div>
+        <div class="img-wrapper" style="height: 200px;">
+            <img class="spot-img" src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg" alt="樂山水民宿">
         </div>
         <div class="price-grid">
             <div class="price-item">8/23 (日)：$14,400</div>
@@ -312,7 +335,10 @@
         </div>
         <div class="spot-grid">
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2018/06/27/17/48/water-fight-3502167_1280.jpg" alt="水槍大戰">
+                    </div>
                     <span class="spot-tag">⏰ 15:00 下午活動</span>
                     <div class="spot-title-row">
                         <div class="spot-name">民宿集合 & 水槍大戰 🔫</div>
@@ -324,7 +350,10 @@
                 </div>
             </div>
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2017/01/06/17/29/hot-pot-1958321_1280.jpg" alt="煮火鍋">
+                    </div>
                     <span class="spot-tag">🍲 晚餐時間</span>
                     <div class="spot-title-row">
                         <div class="spot-name">民宿溫馨煮火鍋 🥘</div>
@@ -347,7 +376,10 @@
         <div class="spot-grid">
             <!-- 羅東農會 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2019/09/26/04/08/tofu-4505051_1280.jpg" alt="羅東鎮農會養生觀光工廠">
+                    </div>
                     <span class="spot-tag">⏰ 10:30 上午行程</span>
                     <div class="spot-title-row">
                         <div class="spot-name">羅東鎮農會養生觀光工廠 🍶</div>
@@ -364,7 +396,10 @@
 
             <!-- 駿懷舊餐廳 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2016/11/22/19/18/vintage-1850143_1280.jpg" alt="駿懷舊餐廳">
+                    </div>
                     <span class="spot-tag">⏰ 12:30 享用午餐</span>
                     <div class="spot-title-row">
                         <div class="spot-name">駿懷舊餐廳 (羅東店) 🍱</div>
@@ -381,7 +416,10 @@
 
             <!-- 溪和水產 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2016/03/05/19/02/abstract-1238247_1280.jpg" alt="溪和水產觀光工廠">
+                    </div>
                     <span class="spot-tag">🐟 下午景點 A</span>
                     <div class="spot-title-row">
                         <div class="spot-name">溪和水產觀光工廠 🦐</div>
@@ -397,7 +435,10 @@
 
             <!-- 虎牌米粉 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2018/03/15/12/16/food-3228057_1280.jpg" alt="虎牌米粉觀光工廠">
+                    </div>
                     <span class="spot-tag">🍜 下午景點 B</span>
                     <div class="spot-title-row">
                         <div class="spot-name">虎牌米粉觀光工廠 🐯</div>
@@ -414,7 +455,10 @@
 
             <!-- 番割田 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2016/09/15/19/24/chicken-1672322_1280.jpg" alt="番割田甕缸雞">
+                    </div>
                     <span class="spot-tag">🍗 晚餐時間</span>
                     <div class="spot-title-row">
                         <div class="spot-name">番割田甕缸雞 🐔</div>
@@ -440,7 +484,10 @@
         <div class="spot-grid">
             <!-- 歪歪球 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2016/11/29/03/53/balls-1867185_1280.jpg" alt="宜蘭歪歪球">
+                    </div>
                     <span class="spot-tag">⏰ 上午放電行程</span>
                     <div class="spot-title-row">
                         <div class="spot-name">宜蘭歪歪球 Wild Wild Ball ⚽</div>
@@ -457,7 +504,10 @@
 
             <!-- 海珍活海鮮 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2018/08/29/19/01/seafood-3640539_1280.jpg" alt="海珍活海鮮餐廳">
+                    </div>
                     <span class="spot-tag">⏰ 12:00 午餐饗宴</span>
                     <div class="spot-title-row">
                         <div class="spot-name">海珍活海鮮餐廳 🐟</div>
@@ -474,7 +524,10 @@
 
             <!-- 回台北 -->
             <div class="spot-card">
-                <div class="spot-top">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://cdn.pixabay.com/photo/2016/01/19/17/56/car-1149997_1280.jpg" alt="賦歸回台北">
+                    </div>
                     <span class="spot-tag">🚗 賦歸溫馨家園</span>
                     <div class="spot-title-row">
                         <div class="spot-name">快樂回台北囉 🏠</div>
