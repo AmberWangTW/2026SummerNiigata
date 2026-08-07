@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新潟（ㄒㄧˋ）小旅行冒險地圖</title>
-    <!-- Google Fonts: 圓潤可愛的字體組合 -->
+    <title>🌿 2026 宜蘭包棟民宿手作與美食之旅 🏡</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f7faf7;
+            --bg-color: #f7faf6;
             --card-bg: #ffffff;
-            --primary-green: #70a1ff;
+            --primary-green: #689f38;
             --soft-green: #e8f5e9;
-            --accent-orange: #ff9f43;
-            --accent-pink: #ffb8b8;
-            --text-main: #2f3542;
-            --text-sub: #57606f;
-            --border-soft: #e2efe0;
-            --shadow-soft: 0 10px 25px rgba(168, 216, 173, 0.15);
+            --border-green: #c8e6c9;
+            --accent-orange: #ff9800;
+            --accent-pink: #ff8a80;
+            --accent-blue: #4fc3f7;
+            --text-main: #2e3d29;
+            --text-sub: #556b2f;
+            --shadow-soft: 0 8px 24px rgba(104, 159, 56, 0.12);
         }
 
         body {
-            font-family: 'Zen Maru Gothic', 'M PLUS Rounded 1c', "Microsoft JhengHei", sans-serif;
+            font-family: 'Zen Maru Gothic', "Microsoft JhengHei", sans-serif;
             background-color: var(--bg-color);
-            background-image: radial-gradient(#d4ecd5 1.5px, transparent 1.5px);
+            background-image: radial-gradient(#c8e6c9 1.5px, transparent 1.5px);
             background-size: 24px 24px;
             color: var(--text-main);
             margin: 0;
@@ -35,40 +35,38 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 860px;
             width: 100%;
         }
 
-        /* 標頭手繪風格 */
+        /* 標頭頁籤 */
         .header {
             text-align: center;
             background: #ffffff;
             padding: 30px 20px;
             border-radius: 24px;
-            border: 3px solid #b8e994;
+            border: 3px solid var(--border-green);
             box-shadow: var(--shadow-soft);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             position: relative;
-            overflow: hidden;
         }
 
         .header::before {
-            content: "🌿 ☁️ 🌱 ☀️ 🎈 🍃";
+            content: "🎈 🌿 🏡 🌊 🦐 🍗 ✨";
             position: absolute;
-            top: 6px;
+            top: 8px;
             left: 0;
             right: 0;
             font-size: 14px;
-            letter-spacing: 12px;
-            opacity: 0.7;
+            letter-spacing: 10px;
+            opacity: 0.8;
         }
 
         .header h1 {
-            margin: 10px 0 6px 0;
-            font-size: 28px;
-            color: #38ada9;
+            margin: 12px 0 6px 0;
+            font-size: 26px;
+            color: var(--primary-green);
             font-weight: 900;
-            letter-spacing: 1px;
         }
 
         .header p {
@@ -78,106 +76,149 @@
             font-weight: 700;
         }
 
-        .illustration-banner {
-            width: 100%;
-            max-height: 180px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-top: 16px;
-            border: 2px dashed #b8e994;
+        /* 民宿費用資訊卡 */
+        .info-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 20px 24px;
+            margin-bottom: 28px;
+            border: 2px dashed var(--primary-green);
+            box-shadow: var(--shadow-soft);
         }
 
-        /* 日期卡片手繪質感 */
+        .info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px dashed var(--border-green);
+            padding-bottom: 10px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .info-title {
+            font-size: 19px;
+            font-weight: 900;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .maps-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #4285F4;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 3px 8px rgba(66, 133, 244, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .maps-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+            background: var(--soft-green);
+            padding: 14px;
+            border-radius: 14px;
+        }
+
+        .price-item {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .price-highlight {
+            color: #d84315;
+            font-weight: 900;
+        }
+
+        /* 每日卡片區塊 */
         .day-card {
-            background: var(--card-bg);
-            border-radius: 20px;
+            background: #ffffff;
+            border-radius: 22px;
             padding: 22px;
             margin-bottom: 28px;
             box-shadow: var(--shadow-soft);
-            border: 2px solid var(--border-soft);
-            position: relative;
+            border: 2px solid var(--border-green);
         }
 
         .day-title {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 900;
-            color: #2ed573;
+            color: var(--primary-green);
             display: flex;
             align-items: center;
-            gap: 10px;
-            border-bottom: 2px dashed #b8e994;
+            justify-content: space-between;
+            border-bottom: 2px dashed var(--border-green);
             padding-bottom: 10px;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .day-title span.badge {
-            background: #eccc68;
-            color: #ffffff;
+        .badge {
+            background: var(--accent-orange);
+            color: white;
             font-size: 13px;
-            padding: 3px 10px;
+            padding: 4px 12px;
             border-radius: 12px;
             font-weight: 700;
         }
 
-        /* 景點網格 */
+        /* 景點與活動網格 */
         .spot-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            gap: 18px;
         }
 
         .spot-card {
-            background: #fcfefc;
-            border: 2px solid #e1f0e3;
+            background: #fcfdfe;
+            border: 2px solid #e8f5e9;
             border-radius: 16px;
-            padding: 16px;
-            transition: all 0.25s ease;
+            padding: 18px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            position: relative;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .spot-card:hover {
-            transform: translateY(-4px);
-            border-color: #78e08f;
-            box-shadow: 0 8px 20px rgba(120, 224, 143, 0.2);
+            transform: translateY(-3px);
+            border-color: var(--primary-green);
         }
 
-        /* 柔和插圖包覆 */
-        .img-wrapper {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
+        .spot-top {
             margin-bottom: 12px;
         }
 
-        .spot-img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .spot-card:hover .spot-img {
-            transform: scale(1.03);
-        }
-
-        .drive-time {
+        .spot-tag {
             display: inline-block;
-            background: #e8f5e9;
-            color: #2ed573;
-            border: 1px solid #b8e994;
-            padding: 4px 12px;
-            border-radius: 15px;
+            background: var(--soft-green);
+            color: var(--primary-green);
+            border: 1px solid var(--border-green);
+            padding: 3px 10px;
+            border-radius: 12px;
             font-size: 12px;
             font-weight: 700;
             margin-bottom: 8px;
-            align-self: flex-start;
         }
 
-        .spot-header {
+        .spot-title-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -189,58 +230,47 @@
             font-size: 17px;
             font-weight: 900;
             color: var(--text-main);
-            line-height: 1.3;
         }
 
-        /* 清新風導航按鈕 */
-        .maps-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background-color: #70a1ff;
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 12px;
-            font-weight: 700;
-            white-space: nowrap;
-            box-shadow: 0 3px 8px rgba(112, 161, 255, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .maps-btn:hover {
-            background-color: #1e90ff;
-            transform: scale(1.05);
-        }
-
-        .spot-desc {
+        .spot-info-list {
             font-size: 13.5px;
             color: var(--text-sub);
             line-height: 1.6;
-            margin-top: 4px;
-            font-weight: 500;
+            margin: 6px 0;
+            padding-left: 0;
+            list-style: none;
         }
 
-        .alert-box {
-            background-color: #fff4e6;
-            border: 2px dashed #ffa502;
-            border-radius: 14px;
-            padding: 12px 16px;
-            margin-bottom: 18px;
-            color: #ff6b81;
+        .spot-info-list li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 4px;
+        }
+
+        .spot-info-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .todo-badge {
+            display: inline-block;
+            background: #fff3e0;
+            color: #e65100;
+            border: 1px dashed #ffb74d;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 12px;
             font-weight: 700;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-top: 6px;
         }
 
-        /* 可愛頁尾 */
         .footer {
             text-align: center;
-            padding: 20px;
-            color: #a4b0be;
+            padding: 16px;
+            color: #9e9e9e;
             font-size: 13px;
             font-weight: 700;
         }
@@ -250,44 +280,59 @@
 
 <div class="container">
 
+    <!-- 頁頭 -->
     <div class="header">
-        <h1>🌱 日本新潟（ㄒㄧˋ）小旅行 🌱</h1>
-        <p>2026/7/3 ～ 7/14 ｜ 兒童專屬繪本風格與導航冒險地圖 🎨</p>
-        <!-- 清新主題插圖 banner -->
-        <img class="illustration-banner" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="新潟清新自然美景插圖">
+        <h1>🏡 2026 宜蘭包棟民宿夏季小旅行 🌿</h1>
+        <p>2026 / 8 / 23 (日) ～ 8 / 25 (二) ｜ 三天兩夜歡樂聚會 🎈</p>
+    </div>
+
+    <!-- 包棟民宿卡片 -->
+    <div class="info-card">
+        <div class="info-header">
+            <div class="info-title">🏡 樂山水民宿（包棟 3 間四人房）</div>
+            <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣冬山鄉柯林一路266號" target="_blank">🗺️ 導航去民宿</a>
+        </div>
+        <div style="font-size: 14px; color: var(--text-sub); font-weight: 700;">
+            📍 地址：宜蘭縣冬山鄉柯林一路266號<br>
+            ⏰ 時間：8/23 (日) 15:00 入住 ｜ 8/25 (二) 11:00 前退房
+        </div>
+        <div class="price-grid">
+            <div class="price-item">8/23 (日)：$14,400</div>
+            <div class="price-item">8/24 (一)：$12,960 <span style="font-size: 12px; color: var(--primary-green);">(9折)</span></div>
+            <div class="price-item">總計：<span class="price-highlight">$27,360</span></div>
+            <div class="price-item">平均一家：<span class="price-highlight">$9,120</span> <span style="font-size:12px; color:#757575;">(共3家)</span></div>
+        </div>
     </div>
 
     <!-- Day 1 -->
     <div class="day-card">
         <div class="day-title">
-            <span>📍 Day 1｜7/3（五）抵達新潟與美味拉麵</span>
-            <span class="badge">第一天</span>
+            <span>💦 Day 1｜8 / 23 (日) 入住打水仗與火鍋夜</span>
+            <span class="badge">第 1 天</span>
         </div>
         <div class="spot-grid">
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="images/NiigataAirport.png" alt="新潟機場">
+                <div class="spot-top">
+                    <span class="spot-tag">⏰ 15:00 下午活動</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">民宿集合 & 水槍大戰 🔫</div>
                     </div>
-                    <span class="drive-time">🚗 車程：約 25～30 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新潟機場 🛬</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟機場" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">搭乘台灣虎航降落日本新潟機場，搭計程車去飯店報到，準備開始大冒險！</div>
+                    <ul class="spot-info-list">
+                        <li>大家於民宿辦理 Check-in 入住聚首！</li>
+                        <li><strong>裝備提醒：</strong>請務必帶妥泳衣、水槍！開啟水上大對決 💦</li>
+                    </ul>
                 </div>
             </div>
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="images/NGT01.jpg" alt="拉麵">
+                <div class="spot-top">
+                    <span class="spot-tag">🍲 晚餐時間</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">民宿溫馨煮火鍋 🥘</div>
                     </div>
-                    <span class="drive-time">🚶 步行/開車可達</span>
-                    <div class="spot-header">
-                        <div class="spot-name">生薑醬油拉麵 (ラーメン東橫) 🍜</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=ラーメン東横+笹口店" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">第一天晚上吃到新潟最著名的「生薑醬油拉麵」🍜！濃郁的湯頭香氣十足，暖心又好吃！</div>
+                    <ul class="spot-info-list">
+                        <li>在包棟民宿舒適空間一起準備食材、圍爐開鍋。</li>
+                        <li>盡情聊天、放鬆享用美味晚餐夜！</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -296,34 +341,91 @@
     <!-- Day 2 -->
     <div class="day-card">
         <div class="day-title">
-            <span>🐬 Day 2｜7/4（六）海豚表演與神奇恐龍探險</span>
-            <span class="badge">水族與科學</span>
+            <span>🎨 Day 2｜8 / 24 (一) DIY手作、懷舊美食與甕缸雞</span>
+            <span class="badge" style="background:#ff9800;">第 2 天</span>
         </div>
         <div class="spot-grid">
+            <!-- 羅東農會 -->
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1570458436416-b8fcccfe883f?auto=format&fit=crop&w=600&q=80" alt="水族館">
+                <div class="spot-top">
+                    <span class="spot-tag">⏰ 10:30 上午行程</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">羅東鎮農會養生觀光工廠 🍶</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣羅東鎮倉前路14號" target="_blank">🗺️ 導航</a>
                     </div>
-                    <span class="drive-time">🚗 車程：約 15 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新潟市水族館 Marinepia 🐬</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟市水族館+Marinepia日本海" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">看可愛海豚精彩跳高高 🐬，觀察企鵝 🐧 與海獅！漫步海底隧道，許多大魚在上方游動！</div>
+                    <ul class="spot-info-list">
+                        <li>📍 羅東鎮倉前路14號 ｜ ☎️ 03-9574525</li>
+                        <li>🎥 12分鐘簡報影片與試飲</li>
+                        <li>🎨 6種手作體驗 (手工豆腐、豆花、手炒冰等)</li>
+                    </ul>
+                    <div class="todo-badge">📌 待預約：8/24(一) 10:30 DIY</div>
                 </div>
             </div>
+
+            <!-- 駿懷舊餐廳 -->
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="自然科學館">
+                <div class="spot-top">
+                    <span class="spot-tag">⏰ 12:30 享用午餐</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">駿懷舊餐廳 (羅東店) 🍱</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣羅東鎮純精路一段53號" target="_blank">🗺️ 導航</a>
                     </div>
-                    <span class="drive-time">🚗 車程：約 14 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新潟縣立自然科學館 🔬</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟縣立自然科學館" target="_blank">🗺️ 導航</a>
+                    <ul class="spot-info-list">
+                        <li>📍 羅東鎮純精路一段53號</li>
+                        <li>🕰️ 營業時間：11:00-14:00 ｜ 17:00-22:00</li>
+                        <li>📺 濃濃復古懷舊柑仔店風情與傳統台菜！</li>
+                    </ul>
+                    <div class="todo-badge">📌 待預約：8/24(一) 12:30 11人用餐</div>
+                </div>
+            </div>
+
+            <!-- 溪和水產 -->
+            <div class="spot-card">
+                <div class="spot-top">
+                    <span class="spot-tag">🐟 下午景點 A</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">溪和水產觀光工廠 🦐</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣五結鄉利興二路11號" target="_blank">🗺️ 導航</a>
                     </div>
-                    <div class="spot-desc">這裡有巨大恐龍模型 🦖、摸得到真正的隕石 ☄️，還有蒸汽火車與火箭 🚂！體驗鏡子迷宮與浮空卡車！</div>
+                    <ul class="spot-info-list">
+                        <li>📍 五結鄉利興二路11號</li>
+                        <li>🎟️ 門票 $100 ｜ 營業至 16:30</li>
+                        <li>🌊 體驗生鮮水產汆燙體驗與海洋漫畫展區。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 虎牌米粉 -->
+            <div class="spot-card">
+                <div class="spot-top">
+                    <span class="spot-tag">🍜 下午景點 B</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">虎牌米粉觀光工廠 🐯</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣五結鄉成興村利興三路5號" target="_blank">🗺️ 導航</a>
+                    </div>
+                    <ul class="spot-info-list">
+                        <li>📍 五結鄉利興三路5號</li>
+                        <li>🎟️ 全票 $200 (含彩繪碗米粉DIY與$100抵用券)</li>
+                        <li>🎟️ 優惠票 $100 (12歲以下/65歲以上/宜蘭縣民等)</li>
+                        <li>🛵 穿越回到1970年代米粉老街場景！</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 番割田 -->
+            <div class="spot-card">
+                <div class="spot-top">
+                    <span class="spot-tag">🍗 晚餐時間</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">番割田甕缸雞 🐔</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣蘇澳鎮海山西路309號" target="_blank">🗺️ 導航</a>
+                    </div>
+                    <ul class="spot-info-list">
+                        <li>📍 蘇澳鎮海山西路309號 (國五蘇澳交流道下)</li>
+                        <li>☎️ 03-9909338 ｜ 營業時間：16:30-20:00</li>
+                        <li>🔥 外皮金黃酥翠、肉質多汁的宜蘭超人氣甕缸雞！</li>
+                    </ul>
+                    <div class="todo-badge" style="background:#e8f5e9; color:#2e7d32; border-color:#a5d6a7;">👍 免預約（現場排位即可）</div>
                 </div>
             </div>
         </div>
@@ -332,368 +434,62 @@
     <!-- Day 3 -->
     <div class="day-card">
         <div class="day-title">
-            <span>⛵ Day 3｜7/5（日）帆船城堡樂園與烤大仙貝</span>
-            <span class="badge">親子歡樂</span>
+            <span>⚽ Day 3｜8 / 25 (二) 退房放電、海鮮大餐與賦歸</span>
+            <span class="badge" style="background:#4fc3f7;">第 3 天</span>
         </div>
         <div class="spot-grid">
+            <!-- 歪歪球 -->
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=600&q=80" alt="山之港樂園">
+                <div class="spot-top">
+                    <span class="spot-tag">⏰ 上午放電行程</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">宜蘭歪歪球 Wild Wild Ball ⚽</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=蘇澳鎮海山西路275號" target="_blank">🗺️ 導航</a>
                     </div>
-                    <span class="drive-time">🚗 車程：約 16 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">山之港樂園 🎡</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=山の下みなとランド" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">公園裡有一座超大的「帆船造型」遊樂城堡 ⛵，有好玩的各式溜滑梯和攀爬繩索，盡情跑跳！</div>
+                    <ul class="spot-info-list">
+                        <li>📍 蘇澳鎮海山西路275號 ｜ ☎️ 03-9908808</li>
+                        <li>🎟️ 門票 $200 (可折抵商品 $100) ｜ 愛心票 $100</li>
+                        <li>🏀 巨型真人彈珠台、巨無霸球類互動嗨翻天！</li>
+                    </ul>
+                    <div class="todo-badge">📌 待預約：8/25(二) 上午</div>
                 </div>
             </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="萬代市場">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 7 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">萬代市場 (PIA Bandai) 🍣</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=PIA+Bandai萬代市場" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">新潟尚鮮的大廚房 🐟！有超受歡迎的佐渡直送迴轉壽司 🍣、現烤海鮮與美味的年輪蛋糕 🍰！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="仙貝王國">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 15 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新潟仙貝王國 🍘</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟仙貝王國" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">體驗自己動手DIY烤直徑 25 公分特大仙貝 🍘！用醬汁畫畫，還能吃到神奇的仙貝霜淇淋 🍦！</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Day 4 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>🫐 Day 4｜7/6（一）現採香甜藍莓與剷雪火車</span>
-            <span class="badge">自然與鐵道</span>
-        </div>
-        <div class="spot-grid">
+            <!-- 海珍活海鮮 -->
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=600&q=80" alt="採藍莓">
+                <div class="spot-top">
+                    <span class="spot-tag">⏰ 12:00 午餐饗宴</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">海珍活海鮮餐廳 🐟</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣蘇澳鎮南寧里漁港路61號" target="_blank">🗺️ 導航</a>
                     </div>
-                    <span class="drive-time">🚗 車程：約 25 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">白根葡萄園（採藍莓）🫐</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=白根葡萄園" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">來到果園體驗採摘新鮮藍莓 🫐！還可以餵小兔子 🐰 和山羊 🐐，喝消暑草莓冰沙！</div>
+                    <ul class="spot-info-list">
+                        <li>📍 蘇澳鎮南寧里漁港路61號</li>
+                        <li>⏰ 10:30–20:00</li>
+                        <li>🦀 南方澳漁港尚青活海鮮盛宴！</li>
+                    </ul>
+                    <div class="todo-badge">📌 待預約：8/25(二) 午餐訂位</div>
                 </div>
             </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1532105956626-9569c03602f6?auto=format&fit=crop&w=600&q=80" alt="鐵道資料館">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 25 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新津鐵道資料館 🚅</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟市新津鐵道資料館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">鐵道迷最愛！看到了厲害的「剷雪列車」 DD14 🚜 與實物新幹線 🚅，還體驗了模擬駕駛 🎮！</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Day 5 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>⛩️ Day 5｜7/7（二）搬家至三條市與參拜彌彥神社</span>
-            <span class="badge">文化漫遊</span>
-        </div>
-        <div class="spot-grid">
+            <!-- 回台北 -->
             <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="彌彥神社">
+                <div class="spot-top">
+                    <span class="spot-tag">🚗 賦歸溫馨家園</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">快樂回台北囉 🏠</div>
                     </div>
-                    <span class="drive-time">🚗 車程：約 30 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">彌彥神社 ⛩️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=彌彥神社" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">收拾行李搬家前往三條市！參拜新潟靈氣最高的神社 ⛩️，穿過巨型紅色「大鳥居」，搭乘纜車 🚡 看絕景！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>🔨 Day 6｜7/8（三）職人金屬工藝與產業振興中心</span>
-            <span class="badge">手作體驗</span>
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="燕市產業史料館">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 20 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">燕市產業史料館 🔨</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=燕市產業史料館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">體驗小職人！拿小鎚子敲敲打打 🔨，手作屬於自己的純鈦金屬餐具，敲出獨一無二的神奇彩虹光澤！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="燕三條地場產業振興中心">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 9 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">燕三條地場產業振興中心 🛍️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=燕三條地場產業振興中心" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">參觀全球聞名的金屬工藝大本營！欣賞精美的刀具、鍋具與各種厲害的手工藝金屬製品！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 7 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>🎆 Day 7｜7/9（四）圓頂煙火秀與滾輪溜滑梯</span>
-            <span class="badge">震撼體驗</span>
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=600&q=80" alt="長岡煙火館">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 30 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">長岡煙火博物館 🎆</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=道の駅+ながおか花火館" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">走進 3D 圓頂大劇場 🎆，感受日本三大煙火大會在夜空中綻放的立體震撼煙火！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="images/imagesNGT02.jpg" alt="越後丘陵公園">
-                    </div>
-                    <span class="drive-time">🚗 車程：約 20 分鐘</span>
-                    <div class="spot-header">
-                        <div class="spot-name">國營越後丘陵公園 🛝</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=國營越後丘陵公園" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">有 26 種超大型體能遊具！滾輪溜滑梯、草地滑草場與夏季玩水區 💦，玩得超級暢快！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 8 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>🌀 Day 8｜7/10（五）颱風班機取消！展開特別冒險</span>
-            <span class="badge" style="background:#ff6b81;">緊急應變</span>
-        </div>
-        <div class="alert-box">
-            🍃 突發狀況：因颱風影響班機取消！展開特別延長版應變行程！
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="新潟機場">
-                    </div>
-                    <span class="drive-time">🚗 上午行程</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新潟機場處理班機 ✈️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟機場" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">早上前往新潟機場確認颱風影響與處理後續班機改簽事宜。</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=600&q=80" alt="新潟車站">
-                    </div>
-                    <span class="drive-time">🚗 下午行程</span>
-                    <div class="spot-header">
-                        <div class="spot-name">JR 新潟車站 CoCoLo 購物 🛍️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟車站+CoCoLo" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">下午前往全新的新潟車站商場逛街採買，品嚐在地美食放鬆心情！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 9 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>温泉 Day 9｜7/11（六）神社參拜與月岡溫泉饗宴</span>
-            <span class="badge">溫泉體驗</span>
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=600&q=80" alt="白山神社">
-                    </div>
-                    <span class="drive-time">🚗 上午行程</span>
-                    <div class="spot-header">
-                        <div class="spot-name">白山神社 ⛩️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=白山神社+新潟" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">參觀新潟市區歷史悠久的白山神社，祈求接下來的行程與飛行一切平安順利！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80" alt="Bic Camera">
-                    </div>
-                    <span class="drive-time">🚗 下午行程</span>
-                    <div class="spot-header">
-                        <div class="spot-name">Bic Camera 新潟店 🛒</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+新潟店" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">下午前往 Bic Camera 大買特買，選購喜愛的玩具與日本電器！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="月岡溫泉">
-                    </div>
-                    <span class="drive-time">🚗 傍晚入住</span>
-                    <div class="spot-header">
-                        <div class="spot-name">月岡溫泉飯店 ♨️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=月岡溫泉" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">晚上入住著名的月岡溫泉飯店，泡美肌溫泉、享用精緻的日式溫泉料理！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 10 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>🎐 Day 10｜7/12（日）八幡宮風鈴神社與整理行李</span>
-            <span class="badge">夏日風情</span>
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="images/imagesNGT03.jpg" alt="風鈴神社">
-                    </div>
-                    <span class="drive-time">🚗 上午行程</span>
-                    <div class="spot-header">
-                        <div class="spot-name">八幡宮 風鈴神社 🎐</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=八幡宮+風鈴神社+新潟" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">參觀八幡宮風鈴神社，漫步在清脆風鈴聲響的風鈴長廊中，感受夏日浪漫氣氛！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=600&q=80" alt="整理行李">
-                    </div>
-                    <span class="drive-time">🚗 下午行程</span>
-                    <div class="spot-header">
-                        <div class="spot-name">返回飯店整理行李 🧳</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=月岡溫泉" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">下午返回飯店好好休息，準備打包整理行李，安排隔天分開回台的路線！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 11 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>✈️ Day 11｜7/13（一）媽媽妹妹直飛桃園 / 爸爸哥哥前往東京</span>
-            <span class="badge" style="background:#70a1ff;">兩路返家</span>
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="新潟機場">
-                    </div>
-                    <span class="drive-time">👩👧 媽媽與妹妹組</span>
-                    <div class="spot-header">
-                        <div class="spot-name">新潟機場 → 桃園機場 ✈️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=新潟機場" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">晚上搭乘延後的回程班機，從新潟機場直飛台灣桃園機場，順利返家！</div>
-                </div>
-            </div>
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80" alt="東京">
-                    </div>
-                    <span class="drive-time">👨👦 爸爸與哥哥組</span>
-                    <div class="spot-header">
-                        <div class="spot-name">搭新幹線前往東京 🚅</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=東京車站" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">搭乘 JR 上越新幹線前往東京，展開精彩的東京一日探索與入住東京飯店！</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Day 12 -->
-    <div class="day-card">
-        <div class="day-title">
-            <span>🛬 Day 12｜7/14（二）爸爸與哥哥從東京飛回台北松山</span>
-            <span class="badge">平安歸家</span>
-        </div>
-        <div class="spot-grid">
-            <div class="spot-card">
-                <div>
-                    <div class="img-wrapper">
-                        <img class="spot-img" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80" alt="羽田機場">
-                    </div>
-                    <span class="drive-time">👨👦 爸爸與哥哥組</span>
-                    <div class="spot-header">
-                        <div class="spot-name">東京羽田/成田機場 → 台北松山 ✈️</div>
-                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=羽田機場" target="_blank">🗺️ 導航</a>
-                    </div>
-                    <div class="spot-desc">搭乘班機從東京飛回台北松山機場，圓滿結束這趟驚險又超值的新潟東京大冒險！</div>
+                    <ul class="spot-info-list">
+                        <li>享用完海鮮大餐後，帶著滿滿歡樂回憶上國道返家。</li>
+                        <li>平安賦歸，期待下一次的大家庭聚會！</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        🌿 新潟家庭大冒險 2026 🌿
+        ✨ 2026 宜蘭包棟民宿手作美食之旅 圓滿成功 ✨
     </div>
 
 </div>
