@@ -127,6 +127,27 @@
             transform: scale(1.05);
         }
 
+        .service-perks {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .perk-pill {
+            background: #fff3e0;
+            color: #e65100;
+            border: 1px solid #ffe0b2;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         .price-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -303,6 +324,33 @@
             margin-top: 6px;
         }
 
+        /* 停電通知提醒框 */
+        .notice-alert {
+            background-color: #fff9db;
+            border: 2px dashed #f59f00;
+            border-radius: 14px;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            color: #d9480f;
+            font-size: 14px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .notice-alert .icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .notice-alert-title {
+            font-weight: 900;
+            font-size: 15px;
+            color: #e03131;
+            margin-bottom: 4px;
+        }
+
         .footer {
             text-align: center;
             padding: 16px;
@@ -328,10 +376,17 @@
             <div class="info-title">🏡 樂山水民宿（包棟 3 間四人房）</div>
             <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣冬山鄉柯林一路266號" target="_blank">🗺️ 導航去民宿</a>
         </div>
-        <div style="font-size: 14px; color: var(--text-sub); font-weight: 700; margin-bottom: 12px;">
+        <div style="font-size: 14px; color: var(--text-sub); font-weight: 700; margin-bottom: 8px;">
             📍 地址：宜蘭縣冬山鄉柯林一路266號<br>
             ⏰ 時間：8/23 (日) 15:00 入住 ｜ 8/25 (二) 11:00 前退房
         </div>
+        
+        <!-- 民宿貼心好康贈送標籤 -->
+        <div class="service-perks">
+            <span class="perk-pill">🍰 第一天入住享「迎賓下午茶」</span>
+            <span class="perk-pill">🥪 民宿每日「活力美味早餐」免費贈送</span>
+        </div>
+
         <div class="img-wrapper" style="height: 200px;">
             <img class="spot-img" src="images/2026Elan1.png" alt="樂山水民宿 - Unsplash">
         </div>
@@ -346,10 +401,11 @@
     <!-- Day 1 -->
     <div class="day-card">
         <div class="day-title">
-            <span>💦 Day 1｜8 / 23 (日) 入住打水仗與火鍋夜</span>
+            <span>💦 Day 1｜8 / 23 (日) 入住迎賓午茶、水槍大戰與火鍋夜</span>
             <span class="badge">第 1 天</span>
         </div>
         <div class="spot-grid">
+            <!-- 民宿集合水槍大戰 + 迎賓下午茶 -->
             <div class="spot-card">
                 <div>
                     <div class="img-wrapper">
@@ -358,21 +414,43 @@
                     <span class="spot-tag">⏰ 15:00 下午活動</span>
                     <span class="drive-tag">🚗 開車前往民宿</span>
                     <div class="spot-title-row">
-                        <div class="spot-name">民宿集合 & 水槍大戰 🔫</div>
+                        <div class="spot-name">民宿 Check-in、迎賓午茶 & 水槍大戰 🍰🔫</div>
                     </div>
                     <ul class="spot-info-list">
-                        <li>大家於民宿辦理 Check-in 入住聚首！</li>
+                        <li>大家於民宿辦理 Check-in，享用民宿準備的<strong>迎賓下午茶</strong> 🍰☕！</li>
                         <li><strong>裝備提醒：</strong>請務必帶妥泳衣、水槍！開啟水上大對決 💦</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- 喜互惠生鮮超市採買 -->
+            <div class="spot-card">
+                <div>
+                    <div class="img-wrapper">
+                        <img class="spot-img" src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=600&q=80" alt="喜互惠生鮮超市採買">
+                    </div>
+                    <span class="spot-tag">🛒 傍晚採買行程</span>
+                    <span class="drive-tag">🚗 從民宿車程約 8 分</span>
+                    <div class="spot-title-row">
+                        <div class="spot-name">喜互惠生鮮超市 (羅東店) 🥦</div>
+                        <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣羅東鎮竹林里純精路三段445號" target="_blank">🗺️ 導航</a>
+                    </div>
+                    <ul class="spot-info-list">
+                        <li>📍 羅東鎮竹林里純精路三段445號</li>
+                        <li>🥩 採買晚上火鍋的新鮮肉片、時蔬、海鮮與飲料零食！</li>
+                        <li>🛒 宜蘭在地最大連鎖超市，食材新鮮齊全！</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 煮火鍋 -->
             <div class="spot-card">
                 <div>
                     <div class="img-wrapper">
                         <img class="spot-img" src="images/2026Elan3.png" alt="煮火鍋 - Unsplash">
                     </div>
                     <span class="spot-tag">🍲 晚餐時間</span>
-                    <span class="drive-tag">🏡 民宿內活動</span>
+                    <span class="drive-tag">🚗 返回民宿車程約 8 分</span>
                     <div class="spot-title-row">
                         <div class="spot-name">民宿溫馨煮火鍋 🥘</div>
                     </div>
@@ -388,7 +466,7 @@
     <!-- Day 2 -->
     <div class="day-card">
         <div class="day-title">
-            <span>🎨 Day 2｜8 / 24 (一) 買伴手禮、懷舊美食與甕缸雞</span>
+            <span>🎨 Day 2｜8 / 24 (一) 活力早餐、伴手禮、懷舊美食與甕缸雞</span>
             <span class="badge" style="background:#ff9800;">第 2 天</span>
         </div>
         <div class="spot-grid">
@@ -405,9 +483,10 @@
                         <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=宜蘭縣羅東鎮倉前路14號" target="_blank">🗺️ 導航</a>
                     </div>
                     <ul class="spot-info-list">
+                        <li>🥪 早上於民宿悠閒享用<strong>民宿贈送的美味早餐</strong>後出發！</li>
                         <li>📍 羅東鎮倉前路14號 ｜ ☎️ 03-9574525</li>
-                        <li>🎥 參觀24節氣館跟地方特產館</li>                       
-                    </ul>                   
+                        <li>🎥 參觀24節氣館跟地方特產館</li>
+                    </ul>
                 </div>
             </div>
 
@@ -428,7 +507,7 @@
                         <li>🕰️ 營業時間：11:00-14:00 ｜ 17:00-22:00</li>
                         <li>📺 濃濃復古懷舊柑仔店風情與傳統台菜！</li>
                     </ul>
-                    <div class="todo-badge">📌 待預約：8/24(一) 12:30 11人用餐</div>
+                    <div class="todo-badge">📌 已預約：8/24(一) 12:30 11人用餐</div>
                 </div>
             </div>
 
@@ -502,6 +581,16 @@
             <span>⚽ Day 3｜8 / 25 (二) 退房放電、海鮮大餐與賦歸</span>
             <span class="badge" style="background:#4fc3f7;">第 3 天</span>
         </div>
+
+        <!-- 停電特別通知提醒框 -->
+        <div class="notice-alert">
+            <div class="icon">⚠️</div>
+            <div>
+                <div class="notice-alert-title">【重要提醒】民宿老闆通知：台電短暫停電通知</div>
+                <div>台電通知 <strong>8/25 (二) 早上 08:30 ～ 08:50</strong> 將有約 <strong>20 分鐘</strong> 短暫停電，請大家注意早晨盥洗、吃早餐、吹頭髮及手機充電時間安排喔！</div>
+            </div>
+        </div>
+
         <div class="spot-grid">
             <!-- 歪歪球 -->
             <div class="spot-card">
@@ -516,6 +605,7 @@
                         <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=蘇澳鎮海山西路275號" target="_blank">🗺️ 導航</a>
                     </div>
                     <ul class="spot-info-list">
+                        <li>🥪 享用<strong>民宿贈送的早餐</strong>，整理行李並於 11:00 前辦理退房。</li>
                         <li>📍 蘇澳鎮海山西路275號 ｜ ☎️ 03-9908808</li>
                         <li>🎟️ 門票 $200 (可折抵商品 $100) ｜ 愛心票 $100</li>
                         <li>🏀 巨型真人彈珠台、巨無霸球類互動嗨翻天！</li>
